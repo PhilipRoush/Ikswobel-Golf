@@ -1,0 +1,253 @@
+/* screen - homepage */
+
+.border-class-1 {
+  border:1px solid var(--mountain-mist);
+}
+.border-class-2 {
+  border:3px solid var(--mountain-mist);
+}
+.font-class-1 {
+  font-family:'Work Sans', Helvetica, Arial, serif;
+  font-style:normal;
+  font-weight:400;
+}
+.font-class-2 {
+  color:var(--black);
+  font-family:"WorkSans-Regular_Light", Helvetica, Arial, serif;
+  font-size:14.0px;
+  line-height:16.0px;
+}
+.font-class-3 {
+  color:var(--white);
+  font-family:"WorkSans-Regular_ExtraBold", Helvetica, Arial, serif;
+  font-size:21.0px;
+  line-height:25.0px;
+}
+.homepage {
+  background-color:var(--white);
+  height:1024px;
+  overflow:hidden;
+  position:relative;
+  width:1440px;
+}
+.homepage .description-C61RwL {
+  background-color:rgba(255,255,255,0);
+  height:420px;
+  left:160px;
+  position:absolute;
+  top:175px;
+  width:1121px;
+}
+.homepage .find-a-golf-partner-BuUzOP {
+  background-color:rgba(255,255,255,0);
+  color:rgba(252,255,252,1.0);
+  font-family:"WorkSans-ExtraBoldItalic", Helvetica, Arial, serif;
+  font-size:60.0px;
+  height:auto;
+  left:51px;
+  letter-spacing:0.00px;
+  line-height:71.0px;
+  position:absolute;
+  text-align:left;
+  top:25px;
+  width:1020px;
+}
+.homepage .find-golf-partners-p-BuUzOP {
+  background-color:rgba(255,255,255,0);
+  color:var(--white);
+  font-family:"WorkSans-LightItalic", Helvetica, Arial, serif;
+  font-size:36.0px;
+  height:auto;
+  left:50px;
+  letter-spacing:0.00px;
+  line-height:42.0px;
+  position:absolute;
+  text-align:left;
+  top:121px;
+  width:410px;
+}
+.homepage .golf-courses-VfktT7 {
+  background-color:rgba(255,255,255,0);
+  color:var(--midnight-moss);
+  flex-shrink:0;
+  font-size:24.0px;
+  height:auto;
+  line-height:28.0px;
+  min-height:28px;
+  position:relative;
+  text-align:left;
+  white-space:nowrap;
+  width:154px;
+}
+.homepage .ikswobel-golf-Spdrbr {
+  background-color:rgba(255,255,255,0);
+  color:var(--midnight-moss);
+  flex-shrink:0;
+  font-size:24.0px;
+  height:auto;
+  line-height:28.0px;
+  min-height:34px;
+  position:relative;
+  text-align:left;
+  width:181px;
+}
+.homepage .keep-track-of-your-g-BuUzOP {
+  background-color:rgba(255,255,255,0);
+  color:var(--white);
+  font-family:"WorkSans-LightItalic", Helvetica, Arial, serif;
+  font-size:36.0px;
+  height:auto;
+  left:590px;
+  letter-spacing:0.00px;
+  line-height:42.0px;
+  position:absolute;
+  text-align:left;
+  top:121px;
+  width:481px;
+}
+.homepage .login-Spdrbr {
+  background-color:rgba(255,255,255,0);
+  color:var(--midnight-moss);
+  flex-shrink:0;
+  font-size:24.0px;
+  height:auto;
+  line-height:28.0px;
+  margin-left:840px;
+  min-height:34px;
+  position:relative;
+  text-align:left;
+  width:69px;
+}
+.homepage .main-image-C61RwL {
+  background-color:rgba(255,255,255,0);
+  height:514px;
+  left:0px;
+  position:absolute;
+  top:128px;
+  width:1440px;
+}
+.homepage .mid-nav-h3Q5NF {
+  align-items:center;
+  background-color:var(--bay-leaf-2);
+  box-sizing:border-box;
+  display:inline-flex;
+  flex-direction:row;
+  flex-shrink:0;
+  height:50px;
+  justify-content:flex-start;
+  margin-top:0px;
+  min-width:1440px;
+  padding:0 208px;
+  position:relative;
+  width:auto;
+}
+.homepage .nav-bars-C61RwL {
+  align-items:flex-start;
+  background-color:rgba(255,255,255,0);
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
+  height:auto;
+  justify-content:flex-start;
+  left:0px;
+  position:absolute;
+  top:0px;
+  width:1440px;
+}
+.homepage .players-VfktT7 {
+  background-color:rgba(255,255,255,0);
+  color:var(--black);
+  flex-shrink:0;
+  font-size:24.0px;
+  height:auto;
+  line-height:28.0px;
+  margin-left:88px;
+  min-height:28px;
+  position:relative;
+  text-align:left;
+  white-space:nowrap;
+  width:84px;
+}
+.homepage .rectangle-BuUzOP {
+  background-color:var(--iron);
+  height:420px;
+  left:0px;
+  opacity:0.26;
+  position:absolute;
+  top:0px;
+  width:1121px;
+}
+.homepage .rectangle-C61RwL {
+  background-color:var(--iron);
+  border-radius:8px;
+  height:251px;
+  left:989px;
+  position:absolute;
+  top:657px;
+  width:362px;
+}
+.homepage .rectangle-VMr6Om {
+  background-color:var(--iron);
+  border-radius:8px;
+  height:251px;
+  left:90px;
+  position:absolute;
+  top:657px;
+  width:362px;
+}
+.homepage .rectangle-h3Q5NF {
+  background-color:var(--bay-leaf);
+  flex-shrink:0;
+  height:95px;
+  margin-top:800px;
+  position:relative;
+  width:1440px;
+}
+.homepage .rectangle-mzXdH9 {
+  background-color:var(--iron);
+  border-radius:8px;
+  height:251px;
+  left:540px;
+  position:absolute;
+  top:657px;
+  width:362px;
+}
+.homepage .sign-up-Spdrbr {
+  background-color:rgba(255,255,255,0);
+  color:var(--midnight-moss);
+  flex-shrink:0;
+  font-size:24.0px;
+  height:auto;
+  line-height:28.0px;
+  margin-bottom:6.0px;
+  margin-left:111px;
+  min-height:28px;
+  position:relative;
+  text-align:left;
+  white-space:nowrap;
+  width:95px;
+}
+.homepage .top-nav-h3Q5NF {
+  align-items:center;
+  background-color:var(--white);
+  box-sizing:border-box;
+  display:inline-flex;
+  flex-direction:row;
+  flex-shrink:0;
+  height:80px;
+  justify-content:flex-end;
+  min-width:1440px;
+  padding:0 55px;
+  position:relative;
+  width:auto;
+}
+:root {
+  --bay-leaf:rgba(132,175,141,1.0);
+  --bay-leaf-2:rgba(131,175,140,1.0);
+  --black:rgba(6,0,0,1.0);
+  --black-2:rgba(0,0,0,1.0);
+  --iron:rgba(215,215,215,1.0);
+  --midnight-moss:rgba(5,5,5,1.0);
+  --mountain-mist:rgba(150,150,150,1.0);
+  --white:rgba(255,255,255,1.0);
+}
