@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_08_184703) do
+ActiveRecord::Schema.define(version: 2020_10_08_215405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2020_10_08_184703) do
 
   create_table "past_rounds", force: :cascade do |t|
     t.integer "score"
+    t.datetime "timestamp"
     t.integer "golf_course_id"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false

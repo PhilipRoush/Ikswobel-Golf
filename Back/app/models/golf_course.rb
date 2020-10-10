@@ -1,5 +1,5 @@
 class GolfCourse < ApplicationRecord
-    validates :name, presence: true, uniqueness: true
+    
     
     has_many :matches
     has_many :past_rounds

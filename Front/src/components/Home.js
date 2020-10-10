@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-
-import Registration from "./auth/Registration";
-import Login from "./auth/Login";
-
+// import Registration from "./Registration";
+// import Login from "./Login";
+import SignUp from './SignUp'
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +13,7 @@ export default class Home extends Component {
 
   handleSuccessfulAuth(data) {
     this.props.handleLogin(data);
-    this.props.history.push("/dashboard");
+    this.props.history.push("/");
   }
 
   handleLogoutClick() {
@@ -31,11 +30,11 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Home</h1>
+        
         <h1>Status: {this.props.loggedInStatus}</h1>
         <button onClick={() => this.handleLogoutClick()}>Logout</button>
-        <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
-        <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
+        <SignUp handleSuccessfulAuth={this.handleSuccessfulAuth} />
+        {/* <Login handleSuccessfulAuth={this.handleSuccessfulAuth} /> */}
       </div>
     );
   }
