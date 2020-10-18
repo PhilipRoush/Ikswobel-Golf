@@ -3,6 +3,7 @@ import axios from "axios";
 // import Registration from "./Registration";
 // import Login from "./Login";
 import SignUp from './SignUp'
+
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -31,9 +32,10 @@ export default class Home extends Component {
     return (
       <div>
         
-        <h1>Status: {this.props.loggedInStatus}</h1>
+        
         <button onClick={() => this.handleLogoutClick()}>Logout</button>
         <SignUp handleSuccessfulAuth={this.handleSuccessfulAuth} />
+        
         {/* <Login handleSuccessfulAuth={this.handleSuccessfulAuth} /> */}
       </div>
     );

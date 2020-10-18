@@ -7,6 +7,13 @@ import './App.css';
 import NavBar from './components/Navbar';
 import Home from './components/Home';
 import Log from './components/Log'
+// import GolfCourseList from "./components/GolfCourseList";
+import CourseMap from "./components/CourseMap"
+import MatchMeetUps from "./components/MatchMeetUps";
+import MatchDetails from "./components/MatchDetails";
+// import MatchEdit from "./components/MatchEdit"
+import AddMatch from "./components/AddMatch"
+import Top100s from './components/Top100s'
 
 export default class App extends Component {
   constructor() {
@@ -15,11 +22,13 @@ export default class App extends Component {
     this.state = {
       loggedInStatus: "NOT_LOGGED_IN",
       user: {}
+      
     };
 
     this.handleLogin = this.handleLogin.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
   }
+
 
   checkLoginStatus() {
     axios
@@ -68,9 +77,11 @@ export default class App extends Component {
 
   render() {
     return (
+ 
       <div className="app">
-        <Router>
+      <Router>
         <NavBar />
+        
           <Switch>
              <Route
               exact
@@ -78,6 +89,7 @@ export default class App extends Component {
               render={props => (
                 <HomePage
                   {...props}
+                  
                   loggedInStatus={this.state.loggedInStatus}
                 />
               )}
@@ -91,7 +103,7 @@ export default class App extends Component {
                   {...props}
                   handleLogin={this.handleLogin}
                   handleLogout={this.handleLogout}
-                  loggedInStatus={this.state.loggedInStatus}
+                 
                 />
               )}
             />
@@ -107,9 +119,49 @@ export default class App extends Component {
                 />
               )}
             />
+         
+             <Route
+              exact
+              path={"/golf-courses"}
+              render={props => (
+                <CourseMap
+                  {...props}
+                  
+                  
+                />
+              )}
+            />
+            <Route
+              exact
+              path={"/top-100-golf-courses"}
+              render={props => (
+                <Top100s
+                  {...props}
+                  
+                  
+                />
+              )}
+            />
+            <Route exact path={"/matches"} component={MatchMeetUps} />
+            {/* <Route exact path={'/matches/add'} component={AddMatch} /> */}
+            
+            <Route
+              exact
+              path={"/matches/add"}
+              render={props => (
+                <AddMatch
+                  {...props}
+                  user={this.state.user}
+                  
+                />
+              )}
+            />
+            <Route exact path={'/matches/:id'} component={MatchDetails} />
           </Switch>
         </Router>
      </div>
     );
   }
 }
+
+// export default App;

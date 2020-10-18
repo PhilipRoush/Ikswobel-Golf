@@ -23,6 +23,8 @@ function NavBar() {
       }, []);
   
     window.addEventListener('resize', showButton);
+
+    
   
     return (
       
@@ -37,10 +39,17 @@ function NavBar() {
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
               <li className='nav-item'>
-                <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                  Home
+                <Link to='/matches' className='nav-links' onClick={closeMobileMenu}>
+                  Matches 
                 </Link>
               </li>
+
+              <li className='nav-item'>
+                <Link to='/matches/add' className='nav-links' onClick={closeMobileMenu}>
+                  Create Match
+                </Link>
+              </li>
+             
               <li className='nav-item'>
                 <Link
                   to='/golf-courses'
@@ -52,6 +61,15 @@ function NavBar() {
               </li>
               <li className='nav-item'>
                 <Link
+                  to='/top-100-golf-courses'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  Top 100 US Golf Courses
+                </Link>
+              </li>
+              <li className='nav-item'>
+                <Link
                   to='/login'
                   className='nav-links'
                   onClick={closeMobileMenu}
@@ -59,6 +77,7 @@ function NavBar() {
                   Login
                 </Link>
               </li>
+            
   
               <li>
                 <Link

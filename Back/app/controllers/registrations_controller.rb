@@ -7,7 +7,8 @@ class RegistrationsController < ApplicationController
       first_name: params['user']['first_name'],
       last_name: params['user']['last_name'],
       city: params['user']['city'],
-      state: params['user']['state']
+      state: params['user']['state'],
+      handicap: params['user']['handicap']
     )
 
     if user

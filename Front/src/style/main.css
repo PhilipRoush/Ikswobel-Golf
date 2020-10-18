@@ -8,6 +8,7 @@ body {
 }
 
 .app {
+  margin-top: 2rem;
   display: inline;
   justify-items: center;
 }

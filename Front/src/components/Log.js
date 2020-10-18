@@ -31,7 +31,7 @@ export default class Log extends Component {
     return (
       <div>
         
-        <h1>Status: {this.props.loggedInStatus}</h1>
+        
         <button onClick={() => this.handleLogoutClick()}>Logout</button>
         {/* <SignUp handleSuccessfulAuth={this.handleSuccessfulAuth} /> */}
         <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />

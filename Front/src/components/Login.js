@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import './logform.css'
 
 export default class Login extends Component {
   constructor(props) {
@@ -48,27 +49,38 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
+      <div className="logform-container">
+        
+      <form onSubmit={this.handleSubmit} className='logform'>
+      <h3>
+          Login to experience all that Ikswobel has to offer!
+        </h3>
+        <div className='logform-inputs'>
+         <label className='logform-label'>Email: </label>
           <input
+            className="logform-input"
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Enter your email"
             value={this.state.email}
             onChange={this.handleChange}
             required
           />
-
+        </div>
+        <div className='logform-inputs'>
+        <label className='logform-label'>Password: </label>
           <input
+            className="form-input"
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="Enter your password"
             value={this.state.password}
             onChange={this.handleChange}
             required
           />
+        </div>
 
-          <button type="submit">Login</button>
+        <button className='logform-input-btn' type="submit">Login</button>
         </form>
       </div>
     );

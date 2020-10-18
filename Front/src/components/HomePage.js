@@ -7,6 +7,7 @@ const HomePage = props => {
 
   return (
     <div>
+      
       <HeroSection />
       <Cards />
       <Footer />

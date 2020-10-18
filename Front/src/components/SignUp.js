@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-
-export default class Registration extends Component {
+import './Form.css'
+export default class SignUp extends Component {
   constructor(props) {
     super(props);
 
@@ -13,6 +13,7 @@ export default class Registration extends Component {
       last_name: "",
       city: "",
       state: "",
+      handicap: "",
       registrationErrors: ""
     };
 
@@ -27,7 +28,7 @@ export default class Registration extends Component {
   }
 
   handleSubmit(event) {
-    const { email, password, password_confirmation } = this.state;
+    const { email, password, password_confirmation, first_name, last_name, city, state, handicap } = this.state;
 
     axios
       .post(
@@ -36,7 +37,13 @@ export default class Registration extends Component {
           user: {
             email: email,
             password: password,
-            password_confirmation: password_confirmation
+            password_confirmation: password_confirmation,
+            first_name: first_name,
+            last_name: last_name,
+            city: city,
+            state: state,
+            handicap: handicap
+
           }
         },
         { withCredentials: true }
@@ -54,36 +61,56 @@ export default class Registration extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
+      <div className="form-container">
+      <form onSubmit={this.handleSubmit} className='form'>
+        <div>
+        <h3>
+          Create your account by filling out the
+          information below.
+        </h3>
+        </div>
+        <div className='form-inputs'>
+         <label className='form-label'>Email: </label>
           <input
+            className="form-input"
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Enter your email"
             value={this.state.email}
             onChange={this.handleChange}
             required
           />
-
+        </div>
+        <div className='form-inputs'>
+        <label className='form-label'>Password: </label>
           <input
+            className="form-input"
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="Enter your password"
             value={this.state.password}
             onChange={this.handleChange}
             required
           />
-
+        </div>
+        
+        <div className='form-inputs'>
+        <label className='form-label'>Password Confirmation: </label>
           <input
+            className="form-input"
             type="password"
             name="password_confirmation"
-            placeholder="Password confirmation"
+            placeholder="Enter your password"
             value={this.state.password_confirmation}
             onChange={this.handleChange}
             required
           />
+        </div>
 
+        <div className='form-inputs'>
+        <label className='form-label'>First Name: </label>
         <input
+            className="form-input"
             type="first_name"
             name="first_name"
             placeholder="First Name"
@@ -91,8 +118,13 @@ export default class Registration extends Component {
             onChange={this.handleChange}
             required
           />
+        </div>
+        
 
-          <input
+        <div className='form-inputs'>
+        <label className='form-label'>Last Name: </label>
+        <input
+            className="form-input"
             type="last_name"
             name="last_name"
             placeholder="Last Name"
@@ -100,8 +132,12 @@ export default class Registration extends Component {
             onChange={this.handleChange}
             required
           />
+        </div>
 
+        <div className='form-inputs'>
+        <label className='form-label'>City: </label>
           <input
+            className="form-input"
             type="city"
             name="city"
             placeholder="City"
@@ -109,8 +145,12 @@ export default class Registration extends Component {
             onChange={this.handleChange}
             required
           />
+        </div>
 
+        <div className='form-inputs'>
+        <label className='form-label'>State: </label>
           <input
+            className="form-input"
             type="state"
             name="state"
             placeholder="State Ex: TX"
@@ -118,8 +158,23 @@ export default class Registration extends Component {
             onChange={this.handleChange}
             required
           />
+        </div>
 
-          <button type="submit">Register</button>
+        <div className='form-inputs'>
+        <label className='form-label'>Handicap: </label>
+          <input
+            className="form-input"
+            type="handicap"
+            name="handicap"
+            placeholder="Enter your handicap.."
+            value={this.state.handicap}
+            onChange={this.handleChange}
+            required
+          />
+        </div>
+
+          <button className='form-input-btn' type="submit">Register</button>
+         
         </form>
       </div>
     );

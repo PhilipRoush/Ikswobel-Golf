@@ -1,0 +1,89 @@
+
+
+
+
+
+.logform-container {
+    background-color: #48f10565;  
+    margin: 200px auto;
+    width: 500px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 10px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .logform-inputs {
+      margin-bottom: 0.5rem;
+      width: 80%;
+    }
+  
+    .logform-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      margin-bottom: 6px;
+      color: rgb(0, 0, 0);
+    }
+    
+    .logform-input {
+      display: block;
+      padding-left: 10px;
+      outline: none;
+      border-radius: 2px;
+      height: 40px;
+      width: 100%;
+      border: none;
+    }
+  
+    .logform {
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 80%;
+      display: grid;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .logform > button {
+      padding: 12px 10px;
+      border: 0;
+      background: linear-gradient(to right, #18db11 0%,#011204 100%); 
+      border-radius: 3px;
+      margin-top: 100px;
+      color: #fff;
+      letter-spacing: 1px;
+      font-family: 'Rubik', sans-serif;
+    }
+   
+    .logform-input-btn {
+      width: 80%;
+      height: 50px;
+      margin-top: 10px;
+      border-radius: 2px;
+      background: linear-gradient(
+        90deg,
+        rgb(39, 176, 255) 0%,
+        rgb(0, 232, 236) 100%
+      );
+      outline: none;
+      border: none;
+      color: #fff;
+      font-size: 1rem;
+    }
+    
+    .logform-input-btn:hover {
+      cursor: pointer;
+      background: linear-gradient(
+        90deg,
+        rgb(39, 143, 255) 0%,
+        rgb(12, 99, 250) 100%
+      );
+      transition: all 0.4s ease-out;
+    }
+  

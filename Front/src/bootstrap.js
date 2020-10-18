@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from "redux";
 import { BrowserRouter } from "react-router-dom";
 import App from "./app";
 import reducers from "./reducers";
-
+import 'semantic-ui-css/semantic.min.css'
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 import "./style/main.scss";
