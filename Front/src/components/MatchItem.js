@@ -6,13 +6,15 @@ class MatchItem extends Component{
     constructor(props){
       super(props);
       this.state = {
-        item:props.item
+        item: props.item
+        
       }
     }
 
     render() {
         return(
             <li className="">
+                <h4>{this.state.item.date}</h4>
                 <Link to={`/matches/${this.state.item.id}`}>{this.state.item.user} {this.state.item.title}</Link>
             </li>
         )

@@ -13,7 +13,9 @@ import MatchMeetUps from "./components/MatchMeetUps";
 import MatchDetails from "./components/MatchDetails";
 // import MatchEdit from "./components/MatchEdit"
 import AddMatch from "./components/AddMatch"
-import Top100s from './components/Top100s'
+// import Top100sMap from './components/Top100sMap'
+import Top100sMap from './components/Top100sMap'
+
 
 export default class App extends Component {
   constructor() {
@@ -23,12 +25,14 @@ export default class App extends Component {
       loggedInStatus: "NOT_LOGGED_IN",
       user: {}
       
+      
     };
 
     this.handleLogin = this.handleLogin.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
   }
 
+    
 
   checkLoginStatus() {
     axios
@@ -75,7 +79,10 @@ export default class App extends Component {
     });
   }
 
+
+
   render() {
+   
     return (
  
       <div className="app">
@@ -135,14 +142,36 @@ export default class App extends Component {
               exact
               path={"/top-100-golf-courses"}
               render={props => (
-                <Top100s
+                <Top100sMap
                   {...props}
                   
                   
                 />
               )}
             />
-            <Route exact path={"/matches"} component={MatchMeetUps} />
+            {/* <Route
+              exact
+              path={"/top-100-golf-courses/:id"}
+              render={props => (
+                <Top100sDetails
+                  {...props}
+                  
+                  
+                />
+              )}
+            /> */}
+            {/* <Route exact path={"/matches"} component={MatchMeetUps} /> */}
+            <Route
+              exact
+              path={"/matches"}
+              render={props => (
+                <MatchMeetUps
+                  {...props}
+                  user={this.state.user}
+                  
+                />
+              )}
+            />
             {/* <Route exact path={'/matches/add'} component={AddMatch} /> */}
             
             <Route
@@ -156,7 +185,17 @@ export default class App extends Component {
                 />
               )}
             />
-            <Route exact path={'/matches/:id'} component={MatchDetails} />
+           <Route
+              exact
+              path={"/matches/:id"}
+              render={props => (
+                <MatchDetails
+                  {...props}
+                  user={this.state.user}
+                  
+                />
+              )}
+            />
           </Switch>
         </Router>
      </div>

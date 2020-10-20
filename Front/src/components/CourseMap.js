@@ -15,7 +15,7 @@ const MapWithAMarker = compose(withScriptjs, withGoogleMap)(props => {
   return (
     
 
-    <GoogleMap defaultZoom={8} defaultCenter={{ lat: 29.5, lng: -95 }} defaultOptions={{ styles: mapStyles }}>
+    <GoogleMap defaultZoom={4} defaultCenter={{ lat: 38.5, lng: -97 }} defaultOptions={{ styles: mapStyles }}>
       {props.markers.map(marker => {
         const onClick = props.onClick.bind(this, marker)
         return (
@@ -64,11 +64,7 @@ componentDidMount(){
 
   getGolfCourses = () => {
     axios
-    .get("http://localhost:3001/golf_courses", {
-        params: {
-            state: 'TX'
-        }
-    })
+    .get("http://localhost:3001/golf_courses")
     .then(res => {
         this.setState({ golf_courses: res.data });
     })

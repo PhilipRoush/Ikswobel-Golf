@@ -26,9 +26,10 @@ class MatchMeetUps extends Component{
 
 
 render() {
-    const matchItems = this.state.matches.map((match, i) => {
+    const matchItems = this.state.matches.map((match) => {
         return(
             <MatchItem key={match.id} item={match} />
+            
         )
     })
     

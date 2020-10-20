@@ -10,15 +10,20 @@ import {
 } from "react-google-maps"
 import mapStyles from "./mapStyles";
 
+
+
+
 const MapWithAMarker = compose(withScriptjs, withGoogleMap)(props => {
 
   return (
     
+    
 
-    <GoogleMap defaultZoom={8} defaultCenter={{ lat: 40.5, lng: -80 }} defaultOptions={{ styles: mapStyles }}>
+    <GoogleMap defaultZoom={4} defaultCenter={{ lat: 38.5, lng: -97 }} defaultOptions={{ styles: mapStyles }}>
       {props.markers.map(marker => {
         const onClick = props.onClick.bind(this, marker)
         return (
+          
           <Marker
             key={marker.id}
             onClick={onClick}
@@ -34,6 +39,7 @@ const MapWithAMarker = compose(withScriptjs, withGoogleMap)(props => {
                   <br />
                   Description: {marker.description}
                   <br />
+                  <img src={marker.image_address} />
                   
                   
                 </div>
@@ -42,24 +48,26 @@ const MapWithAMarker = compose(withScriptjs, withGoogleMap)(props => {
           </Marker>
         )
       })}
+      
     </GoogleMap>
     
   )
   
 })
 
-export default class Top100 extends Component {
+export default class Top100Map extends Component {
   constructor(props) {
     super(props)
     this.state = {
       top100s: [],
       selectedMarker: false
       
+      
     }
   }
 
   
- 
+    
 
 componentDidMount(){
     this.getTop100s();
@@ -77,9 +85,10 @@ componentDidMount(){
 };
   handleClick = (marker, event) => {
     // console.log({ marker })
-    this.setState({ selectedMarker: marker })
+    this.setState({ selectedMarker: marker  })
   }
-  render() {
+  render() {   
+    
     return (
       
       <MapWithAMarker
@@ -88,9 +97,11 @@ componentDidMount(){
         onClick={this.handleClick}
         googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpVirntcFIy8-_MS23bABIiFm9QLhAwiw"
         loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `400px` }} />}
+        containerElement={<div style={{ height: `500px` }} />}
         mapElement={<div style={{ height: `100%` }} />}
       />
+      
+      
       
     )
   }

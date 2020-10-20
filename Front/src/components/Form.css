@@ -15,8 +15,6 @@
     width: 80%;
   }
 
-  
-
   .form-label {
     display: inline-block;
     font-size: 0.8rem;
@@ -50,7 +48,7 @@
   .form > button {
     padding: 12px 10px;
     border: 0;
-    background: linear-gradient(to right, #19db2a 0%,#031b0a 100%); 
+    background: linear-gradient(to right, #19db2a 0%,#03121b 100%); 
     border-radius: 3px;
     margin-top: 40px;
     color: #fff;
