@@ -7,7 +7,7 @@ import './AddMatch.css'
 class AddMatch extends Component{
   constructor(props) {
     super(props);
-    this.state = {golf_courses: []}
+    this.state = {top100s: []}
   }
     addMatch(newMatch){
         axios.request({
@@ -26,9 +26,9 @@ class AddMatch extends Component{
   
     getGolfCourses = () => {
       axios
-      .get("http://localhost:3001/golf_courses")
+      .get("http://localhost:3001/top100s")
       .then(res => {
-          this.setState({ golf_courses: res.data });
+          this.setState({ top100s: res.data });
       })
       .catch(err => {
           console.log(err);
@@ -82,7 +82,7 @@ class AddMatch extends Component{
           </div>
           <div className="addform-inputs">
             <select type="text" name="course_name" ref="course_name">
-            {this.state.golf_courses.map((course, key) => {
+            {this.state.top100s.map((course, key) => {
              return( <option key={key} value={course.name}> {course.name} </option>)
             })}
             </select>

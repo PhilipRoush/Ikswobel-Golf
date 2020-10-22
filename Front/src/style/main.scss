@@ -20,3 +20,45 @@ body {
     display: inline;
     justify-items: center;
 }
+
+.labelInfo{
+    background-color: #35b82f69;
+    padding: 3px 6px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+}
+
+.icon{
+    margin-top: 3.5px;
+    margin-right: .4rem;
+}
+
+
+.course-card {
+    display: table;
+    margin: 30 auto;
+    max-width: fit-content;
+    background-color: rgba(36, 194, 36, 0.393);
+    padding: 25px;
+    // margin: 35px;
+    border-radius: 10px;
+    border: 1px solid rgb(7, 74, 12);
+    a {
+      box-shadow: 0 5px 15px #323;
+      padding: 8px 10px 10px;
+      border-radius: 10px;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+    }
+    a:hover {
+      
+      text-decoration: none;
+      height: 100%;
+      
+      border-radius: 10px;
+    }
+  }
+  
+  

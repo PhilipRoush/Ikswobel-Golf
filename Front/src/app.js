@@ -15,7 +15,8 @@ import MatchDetails from "./components/MatchDetails";
 import AddMatch from "./components/AddMatch"
 // import Top100sMap from './components/Top100sMap'
 import Top100sMap from './components/Top100sMap'
-
+import GolfCourseContainer from './components/GolfCourseContainer'
+import GolfCourseDetails from "./components/GolfCourseDetails";
 
 export default class App extends Component {
   constructor() {
@@ -96,7 +97,7 @@ export default class App extends Component {
               render={props => (
                 <HomePage
                   {...props}
-                  
+                  handleLogout={this.handleLogout}
                   loggedInStatus={this.state.loggedInStatus}
                 />
               )}
@@ -114,6 +115,7 @@ export default class App extends Component {
                 />
               )}
             />
+            
             <Route
               exact
               path={"/login"}
@@ -149,6 +151,17 @@ export default class App extends Component {
                 />
               )}
             />
+            <Route
+              exact
+              path={"/top-100-golf-courses/:id"}
+              render={props => (
+                <GolfCourseDetails
+                  {...props}
+                  
+                  
+                />
+              )}
+            />
             {/* <Route
               exact
               path={"/top-100-golf-courses/:id"}
@@ -161,6 +174,18 @@ export default class App extends Component {
               )}
             /> */}
             {/* <Route exact path={"/matches"} component={MatchMeetUps} /> */}
+            
+            <Route
+              exact
+              path={"/services"}
+              render={props => (
+                <GolfCourseContainer
+                  {...props}
+                  
+                  
+                />
+              )}
+            />
             <Route
               exact
               path={"/matches"}

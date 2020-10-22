@@ -1,29 +1,29 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import MatchItem from './MatchItem';
+import GolfCourseItem from './GolfCourseItem';
 import { Grid, Typography, Container } from '@material-ui/core';
 
 
 
 
 
-class MatchMeetUps extends Component{
+class GolfCourseContainer extends Component{
     constructor() {
         super();
         this.state = {
-            matches: []
+            top100s: []
         }
     }
 
     componentWillMount(){
-        this.getMatches();
+        this.getCourses();
     }
 
-    getMatches() {
-        axios.get('http://localhost:3001/matches')
+    getCourses() {
+        axios.get('http://localhost:3001/top100s')
         .then(response => {
-            this.setState({matches: response.data}, () => {
-                // console.log(this.state);
+            this.setState({top100s: response.data}, () => {
+                console.log(this.state);
             })
         })
     }
@@ -32,9 +32,9 @@ class MatchMeetUps extends Component{
 render() {
     
 
-    const matchItems = this.state.matches.map((match) => {
+    const courseItems = this.state.top100s.map((course) => {
         return(
-            <MatchItem key={match.id} item={match} />
+            <GolfCourseItem key={course.id} item={course} />
         )})
         
         return (
@@ -53,10 +53,10 @@ render() {
               alignItems="center">
             <Grid item xl={12} sm={6} md={6}>
                 <Typography className="marginT-2" variant="h3" component="h1">
-                    List of Events
+                    List of Golf Courses
                 </Typography>
                 <Grid container spacing={6}>
-                    {matchItems}
+                    {courseItems}
                 </Grid>
             </Grid>
         </Grid>
@@ -68,4 +68,4 @@ render() {
 }
 
 
-export default MatchMeetUps;
+export default GolfCourseContainer;

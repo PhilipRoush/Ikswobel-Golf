@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 import { Paper, Grid, Box, Typography, Container } from '@material-ui/core';
 
-class MatchDetails extends Component{
+class GolfCourseDetails extends Component{
     constructor(props){
       super(props);
       this.state = {
@@ -14,14 +14,14 @@ class MatchDetails extends Component{
     }
 
     componentWillMount(){
-        this.getMatches();
+        this.getCourses();
     }
 
    
 
-    getMatches() {
+    getCourses() {
         let matchId = this.props.match.params.id;
-        axios.get(`http://localhost:3001/matches/${matchId}`)
+        axios.get(`http://localhost:3001/top100s/${matchId}`)
         .then(response => {
             console.log(response);
             this.setState({details: response.data}, () => {
@@ -70,7 +70,7 @@ class MatchDetails extends Component{
             //     {/* <button onClick={this.onDelete.bind(this)}>Delete</button> */}
             // </div>
             <div>
-            <Link to='/matches'>Back</Link>
+            <Link to='/top-100-golf-courses'>Back</Link>
             <Paper elevation={8}>
             <Container fixed>
             
@@ -78,29 +78,20 @@ class MatchDetails extends Component{
                 <Grid item xl={12} md={6}>
                     <Grid container spacing={6}>
                         <Grid item xs={6}>
-                            <span className='labelInfo'>Date</span>
-                            <Typography variant="h6" paragraph>{this.state.details.date}</Typography>
+                            <span className='labelInfo'>State</span>
+                            <Typography variant="h6" paragraph>{this.state.details.state}</Typography>
                         </Grid>
                         
                         <Grid item xs={6}>
-                            <span className='labelInfo'>Time</span>
+                            <span className='labelInfo'>City</span>
                             <Box display="flex">
-                                <Typography variant="h6" paragraph>{this.state.details.time}</Typography>
+                                <Typography variant="h6" paragraph>{this.state.details.city}</Typography>
                             </Box>
                         </Grid>
                     </Grid>
 
-                    <span className='labelInfo'>Golf Course Location</span>
-                    <Typography variant="h6" paragraph>{this.state.details.course_name}</Typography>
-                                    
                     <span className='labelInfo'>Description</span>
-                    <Typography variant="h6" paragraph>
-                    {this.state.details.description}
-                    </Typography>
-                    
-                    <Typography display="inline">
-                         Hosted By {this.state.details.full_name}
-                    </Typography>
+                    <Typography variant="h6" paragraph>{this.state.details.description}</Typography>
                 </Grid>
                 </Grid>
                 </Container>
@@ -111,4 +102,4 @@ class MatchDetails extends Component{
     }
 }
 
-    export default MatchDetails;
+    export default GolfCourseDetails;

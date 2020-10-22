@@ -9,8 +9,7 @@ import {
   InfoWindow
 } from "react-google-maps"
 import mapStyles from "./mapStyles";
-
-
+import GolfCourseContainer from './GolfCourseContainer'
 
 
 const MapWithAMarker = compose(withScriptjs, withGoogleMap)(props => {
@@ -44,7 +43,7 @@ const MapWithAMarker = compose(withScriptjs, withGoogleMap)(props => {
                   
                 </div>
               </InfoWindow>}
-            
+              
           </Marker>
         )
       })}
@@ -63,11 +62,16 @@ export default class Top100Map extends Component {
       selectedMarker: false
       
       
-    }
+  }
+  
+  
   }
 
   
-    
+
+
+
+
 
 componentDidMount(){
     this.getTop100s();
@@ -85,24 +89,32 @@ componentDidMount(){
 };
   handleClick = (marker, event) => {
     // console.log({ marker })
-    this.setState({ selectedMarker: marker  })
+    this.setState({ selectedMarker: marker,  latlong: marker })
   }
   render() {   
     
+
     return (
+      <div>
       
+     
       <MapWithAMarker
+        latlong={this.state.latlong}
         selectedMarker={this.state.selectedMarker}
         markers={this.state.top100s}
         onClick={this.handleClick}
         googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpVirntcFIy8-_MS23bABIiFm9QLhAwiw"
         loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `500px` }} />}
+        containerElement={<div style={{ height: `469px` }} />}
         mapElement={<div style={{ height: `100%` }} />}
       />
       
+     <GolfCourseContainer />
       
+      </div>
+
       
     )
   }
 }
+
