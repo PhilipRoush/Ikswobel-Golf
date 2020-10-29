@@ -8,21 +8,21 @@
     width: 500px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
     position: relative;
-    border-radius: 10px;
+    border-radius: 135px;
     height: 630px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
   
   .addform-inputs {
-      margin-bottom: 0.5rem;
-      width: 80%;
+      margin-bottom: 1.5rem;
+      width: 100%;
     }
   
     
   
     .addform-label {
-      display: inline-block;
+      display: block;
       font-size: 0.8rem;
       margin-bottom: 6px;
       color: rgb(0, 0, 0);
@@ -66,7 +66,7 @@
       width: 80%;
       height: 50px;
       margin-top: 10px;
-      border-radius: 2px;
+      border-radius: 50px;
       background: linear-gradient(
         90deg,
         rgb(28, 211, 22) 0%,
@@ -88,3 +88,10 @@
       transition: all 0.4s ease-out;
     }
   
+    .add-match-header {
+      font-weight: 900;
+      font-size: 40px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      position: relative;
+      top: -35px;
+    }

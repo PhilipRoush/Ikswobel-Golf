@@ -93,7 +93,7 @@
   }
 
   .nav-menu.active {
-    background: #1cd715;
+    background: #198515;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -152,7 +152,7 @@
 
   .nav-links-mobile:hover {
     background: #fff;
-    color: #28da1c;
+    color: #1f7619;
     transition: 250ms;
   }
 }

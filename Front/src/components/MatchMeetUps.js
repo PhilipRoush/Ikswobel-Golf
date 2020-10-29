@@ -45,15 +45,15 @@ render() {
         //     {matchItems}
         // </ul>
         // </div>
-        <div className="minHeight">
-        <Container fixed>
+        <div>
+        <Container className='course-card' fixed>
         <Grid container
               direction="row"
-              justify="space-evenly"
+              justify="flex-start"
               alignItems="center">
-            <Grid item xl={12} sm={6} md={6}>
+            <Grid item lg={12} sm={6} md={6}>
                 <Typography className="marginT-2" variant="h3" component="h1">
-                    List of Events
+                    List of Matches
                 </Typography>
                 <Grid container spacing={6}>
                     {matchItems}

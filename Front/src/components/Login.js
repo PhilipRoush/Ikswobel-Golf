@@ -53,10 +53,10 @@ export default class Login extends Component {
         
       <form onSubmit={this.handleSubmit} className='logform'>
       <h3>
-          Login to experience all that Ikswobel has to offer!
+          WELCOME BACK! LOGIN HERE
         </h3>
         <div className='logform-inputs'>
-         <label className='logform-label'>Email: </label>
+         <label className='logform-label'></label>
           <input
             className="logform-input"
             type="email"
@@ -68,9 +68,9 @@ export default class Login extends Component {
           />
         </div>
         <div className='logform-inputs'>
-        <label className='logform-label'>Password: </label>
+        <label className='logform-label'></label>
           <input
-            className="form-input"
+            className="logform-input"
             type="password"
             name="password"
             placeholder="Enter your password"

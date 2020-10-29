@@ -1,4 +1,8 @@
 body {
+  background-image: url("https://media.istockphoto.com/vectors/hexagon-seamless-pattern-golf-ball-texture-white-honeycomb-background-vector-id1158467764?k=6&m=1158467764&s=612x612&w=0&h=MWG3OmMwlVHLNTLdarUKuBUpxQy6mKJXOR0LaYW3yp8=");
+}
+
+body {
   overflow-x: hidden;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
@@ -11,5 +15,58 @@ body {
   margin-top: 2rem;
   display: inline;
   justify-items: center;
+}
+
+.labelInfo {
+  background-color: #35b82f69;
+  padding: 3px 6px;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+}
+
+.icon {
+  margin-top: 3.5px;
+  margin-right: .4rem;
+}
+
+.course-card {
+  display: table;
+  margin: 28px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  background-color: rgba(36, 194, 36, 0.393);
+  padding: 10px;
+  border-radius: 100px;
+  border: 4px dashed #074a0c;
+  padding-top: 70px;
+}
+
+.course-card a {
+  -webkit-box-shadow: 0 5px 15px #323;
+          box-shadow: 0 5px 15px #323;
+  padding: 8px 10px 10px;
+  border-radius: 10px;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.course-card a:hover {
+  text-decoration: none;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.MuiGrid-container {
+  width: 200%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /*# sourceMappingURL=main.css.map */

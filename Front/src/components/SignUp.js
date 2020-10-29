@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import './Form.css'
+import './SignUp.css'
 export default class SignUp extends Component {
   constructor(props) {
     super(props);
@@ -61,18 +61,18 @@ export default class SignUp extends Component {
 
   render() {
     return (
-      <div className="form-container">
-      <form onSubmit={this.handleSubmit} className='form'>
-        <div>
-        <h3>
-          Create your account by filling out the
-          information below.
+      <div className="signform-container">
+       
+      <form onSubmit={this.handleSubmit} className='signform'>
+        
+      <h3 className= 'signform-header'>
+          WELCOME TO IKSWOBEL!
         </h3>
-        </div>
-        <div className='form-inputs'>
-         <label className='form-label'>Email: </label>
+        
+        <div className='signform-inputs'>
+         <label className='signform-label'> </label>
           <input
-            className="form-input"
+            className="signform-input"
             type="email"
             name="email"
             placeholder="Enter your email"
@@ -81,10 +81,10 @@ export default class SignUp extends Component {
             required
           />
         </div>
-        <div className='form-inputs'>
-        <label className='form-label'>Password: </label>
+        <div className='signform-inputs'>
+        <label className='signform-label'> </label>
           <input
-            className="form-input"
+            className="signform-input"
             type="password"
             name="password"
             placeholder="Enter your password"
@@ -94,10 +94,10 @@ export default class SignUp extends Component {
           />
         </div>
         
-        <div className='form-inputs'>
-        <label className='form-label'>Password Confirmation: </label>
+        <div className='signform-inputs'>
+        <label className='signform-label'></label>
           <input
-            className="form-input"
+            className="signform-input"
             type="password"
             name="password_confirmation"
             placeholder="Enter your password"
@@ -107,10 +107,10 @@ export default class SignUp extends Component {
           />
         </div>
 
-        <div className='form-inputs'>
-        <label className='form-label'>First Name: </label>
+        <div className='signform-inputs'>
+        <label className='signform-label'> </label>
         <input
-            className="form-input"
+            className="signform-input"
             type="first_name"
             name="first_name"
             placeholder="First Name"
@@ -121,10 +121,10 @@ export default class SignUp extends Component {
         </div>
         
 
-        <div className='form-inputs'>
-        <label className='form-label'>Last Name: </label>
+        <div className='signform-inputs'>
+        <label className='signform-label'> </label>
         <input
-            className="form-input"
+            className="signform-input"
             type="last_name"
             name="last_name"
             placeholder="Last Name"
@@ -134,10 +134,10 @@ export default class SignUp extends Component {
           />
         </div>
 
-        <div className='form-inputs'>
-        <label className='form-label'>City: </label>
+        <div className='signform-inputs'>
+        <label className='signform-label'></label>
           <input
-            className="form-input"
+            className="signform-input"
             type="city"
             name="city"
             placeholder="City"
@@ -147,10 +147,10 @@ export default class SignUp extends Component {
           />
         </div>
 
-        <div className='form-inputs'>
-        <label className='form-label'>State: </label>
+        <div className='signform-inputs'>
+        <label className='signform-label'></label>
           <input
-            className="form-input"
+            className="signform-input"
             type="state"
             name="state"
             placeholder="State Ex: TX"
@@ -160,10 +160,10 @@ export default class SignUp extends Component {
           />
         </div>
 
-        <div className='form-inputs'>
-        <label className='form-label'>Handicap: </label>
+        <div className='signform-inputs'>
+        <label className='signform-label'></label>
           <input
-            className="form-input"
+            className="signform-input"
             type="handicap"
             name="handicap"
             placeholder="Enter your handicap.."
@@ -173,9 +173,17 @@ export default class SignUp extends Component {
           />
         </div>
 
-          <button className='form-input-btn' type="submit">Register</button>
+          <button className='signform-input-btn' type="submit">SIGN UP</button>
          
         </form>
+        <div className="right-container">
+        <div className="bg">
+        <div className="text">
+          
+        </div>
+        </div>
+        </div>
+
       </div>
     );
   }

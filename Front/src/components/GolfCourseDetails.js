@@ -20,8 +20,8 @@ class GolfCourseDetails extends Component{
    
 
     getCourses() {
-        let matchId = this.props.match.params.id;
-        axios.get(`http://localhost:3001/top100s/${matchId}`)
+        let courseId = this.props.match.params.id;
+        axios.get(`http://localhost:3001/top100s/${courseId}`)
         .then(response => {
             console.log(response);
             this.setState({details: response.data}, () => {

@@ -19,16 +19,16 @@ class MatchItem extends Component{
             //     <Link to={`/matches/${this.state.item.id}`}>{this.state.item.user} {this.state.item.title}</Link>
             // </li>
             // </div>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
+            <Grid  item xl={12} sm={6} md={6} lg={3}>
                 <Card>
                     <Link to={`/matches/${this.state.item.id}`}>
-                        <img style={{width: '100%', height: '220px'}} src={'https://icons.iconarchive.com/icons/icons-land/points-of-interest/256/Golf-Club-Green-icon.png'}
+                        <img style={{width: '100%', height: '200px'}} src={'https://icons.iconarchive.com/icons/icons-land/points-of-interest/256/Golf-Club-Green-icon.png'}
                           alt="Sport" />
                     </Link>
                     <CardHeader className="padB-0" title={this.state.item.title} />
                     <CardContent>
                         <Typography className="marginB-1" variant="body2" color="textSecondary" component="p">
-                        {this.state.item.description}
+                        {this.state.item.course_name}
                         </Typography>
                     </CardContent>
                     <CardActions>

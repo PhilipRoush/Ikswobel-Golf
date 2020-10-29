@@ -9,8 +9,8 @@
     width: 500px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
     position: relative;
-    border-radius: 10px;
-    height: 250px;
+    border-radius: 45px;
+    height: 300px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -32,7 +32,7 @@
       padding-left: 10px;
       outline: none;
       border-radius: 2px;
-      height: 40px;
+      height: 30px;
       width: 100%;
       border: none;
     }
@@ -54,11 +54,11 @@
       padding: 12px 10px;
       border: 0;
       background: linear-gradient(to right, #18db11 0%,#011204 100%); 
-      border-radius: 3px;
-      margin-top: 100px;
+      border-radius: 27px;
+      margin-top: 30px;
       color: #fff;
       letter-spacing: 1px;
-      font-family: 'Rubik', sans-serif;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
    
     .logform-input-btn {

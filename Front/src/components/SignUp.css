@@ -1,0 +1,117 @@
+.signform-container {
+    background-color: #35ec1565;
+    margin: 100px;
+    width: 508px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 40px;
+    height: 750px;
+    display: block;
+    grid-template-columns: 1fr 1fr;
+    top: -35px;
+    margin-left: 220px;
+  }
+  
+  .signform-inputs {
+      margin-bottom: 1.1rem;
+      width: 60%;
+      margin-left: 100px;
+    }
+  
+    .signform-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      margin-bottom: 6px;
+      color: rgb(0, 0, 0);
+    }
+    
+    .signform-input {
+      display: block;
+      padding-left: 10px;
+      outline: double;
+      border-radius: 2px;
+      height: 40px;
+      width: 100%;
+      border: none;
+    }
+  
+    .signform {
+        position: absolute;
+        top: 30px;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        width: 27%;
+        height: 90%;
+        display: contents;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .signform > button {
+        padding: 8px 10px;
+        border: 1;
+        background: linear-gradient(#127a1a 0%, #f9fbfd 100%);
+        border-radius: 30px;
+        margin-top: 12px;
+        color: rgb(7, 0, 0);
+        letter-spacing: 0px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+   
+    .signform-input-btn {
+        width: 50%;
+        height: 50px;
+        margin-top: 16px;
+        border-radius: 30px;
+        background: linear-gradient(90deg, #0e8a1f 0%, #000802 100%);
+        outline: none;
+        border: double;
+        color: rgb(255, 255, 255);
+        font-size: 1.5rem;
+        margin-left: 122px;
+    
+    }
+    
+    .signform-input-btn:hover {
+      cursor: pointer;
+      background: linear-gradient(
+        90deg,
+        rgb(89, 255, 39) 0%,
+        rgb(235, 241, 233) 100%
+      );
+      transition: all 0.4s ease-out;
+    }
+  
+    .signform-header {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin-left: 140px;
+        padding-top: 16px;
+        font-size: x-large;
+    }
+
+    .right-container {  
+        margin-left: 735px;
+        padding: 20px -7px;
+        position: absolute;
+        width: 828px;
+        height: 972px;
+        border: 0px solid rgb(0, 2, 0);
+        margin-top: -815px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       }
+
+       .bg {  
+        position: absolute;
+    top: 0px;
+    left: 0%;
+    width: 100%;
+    height: 1000px;
+    background-image: url(https://images.unsplash.com/photo-1593282153762-a41e3cceb06c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80);
+    background-position: -26px -214px;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+       }

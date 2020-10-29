@@ -105,8 +105,8 @@ componentDidMount(){
         onClick={this.handleClick}
         googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpVirntcFIy8-_MS23bABIiFm9QLhAwiw"
         loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `469px` }} />}
-        mapElement={<div style={{ height: `100%` }} />}
+        containerElement={<div style={{ height: `475px` }} />}
+        mapElement={<div style={{ height: `90%` }} />}
       />
       
      <GolfCourseContainer />

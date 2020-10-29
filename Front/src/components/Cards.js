@@ -25,19 +25,19 @@ function Cards() {
           <ul className='cards__items'>
             <CardItem
               src='images/basket-of-golf-balls.jpg'
-              text='dsgfsdfhgadfghfghfgshsfghsftghsfgh'
+              text='Top 100 Golf Course Cards'
               label='something'
               path='/services'
             />
             <CardItem
               src='images/ig.png'
-              text='sdgadfgdwrgrdhyrwtdhwrtdhteeerwtgd'
+              text='Sweet Golf Background'
               label='something'
               path='/products'
             />
             <CardItem
               src='images/golf-clubs-driver.jpg'
-              text='drgqdrshtdhftjdtyfjyfhrtffg'
+              text='Future Plans'
               label='something'
               path='/services'
             />

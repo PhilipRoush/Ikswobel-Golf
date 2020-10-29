@@ -67,18 +67,18 @@ class AddMatch extends Component{
        
       
        <form onSubmit={this.onSubmit.bind(this)} className='logform'>
-        <h2>{this.props.user.first_name} {this.props.user.last_name}</h2>
+        <div className='add-match-header'>{this.props.user.first_name} {this.props.user.last_name}</div>
         <div className="addform-inputs">
-            <input type="text" name="full_name" ref="full_name" />
-            <label className='addform-label' htmlFor="full_name">Full Name</label>
+            <input placeholder="Enter your full name..." type="text" name="full_name" ref="full_name" />
+            <label className='addform-label' htmlFor="full_name"></label>
           </div>
           <div className="addform-inputs">
-            <input type="text" name="title" ref="title" />
-            <label className='addform-label' htmlFor="title">Title</label>
+            <input placeholder="Enter a title" type="text" name="title" ref="title" />
+            <label className='addform-label' htmlFor="title"></label>
           </div>
           <div className="addform-inputs">
-            <input type="text" name="description" ref="description" />
-            <label className='addform-label' htmlFor="description">Description</label>
+            <input placeholder="Enter a Description"type="text" name="description" ref="description" />
+            <label className='addform-label' htmlFor="description"></label>
           </div>
           <div className="addform-inputs">
             <select type="text" name="course_name" ref="course_name">
@@ -94,16 +94,16 @@ class AddMatch extends Component{
             <label className='addform-label' htmlFor="golf_course_id">Golf Course</label>
           </div> */}
           <div className="addform-inputs">
-            <input type="text" name="date" ref="date" />
-            <label className='addform-label' htmlFor="date">Date</label>
+            <input placeholder="Enter a date" type="text" name="date" ref="date" />
+            <label className='addform-label' htmlFor="date"></label>
           </div>
           <div className="addform-inputs">
-            <input type="text" name="time" ref="time" />
-            <label className='addform-label' htmlFor="time">Time</label>
+            <input placeholder="Enter a time" type="text" name="time" ref="time" />
+            <label className='addform-label' htmlFor="time"></label>
           </div>
           <div className="addform-inputs">
-            <input type="integer" name="handicap" ref="handicap" />
-            <label className='addform-label' htmlFor="handicap">Handicap Max?</label>
+            <input placeholder="Max handicap?"type="integer" name="handicap" ref="handicap" />
+            <label className='addform-label' htmlFor="handicap"></label>
           </div>
           <input type="submit" value="Save" className="addform-input-btn" />
         </form>

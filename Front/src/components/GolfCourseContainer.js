@@ -46,21 +46,23 @@ render() {
         // </ul>
         // </div>
         <div className="minHeight">
-        <Container fixed>
+        
+         <Typography  variant="h2" component="h1">
+                    Top 100 Golf Courses in the US
+                </Typography>
         <Grid container
+              className='course-card'
               direction="row"
               justify="space-evenly"
               alignItems="center">
-            <Grid item xl={12} sm={6} md={6}>
-                <Typography className="marginT-2" variant="h3" component="h1">
-                    List of Golf Courses
-                </Typography>
+            <Grid item lg={8} xs={12} sm={6} md={6}>
+               
                 <Grid container spacing={6}>
                     {courseItems}
                 </Grid>
             </Grid>
         </Grid>
-        </Container>
+        
     </div>
         
     )
